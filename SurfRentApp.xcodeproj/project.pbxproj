@@ -23,6 +23,7 @@
 		9E806D5C26B412EA005936E7 /* RentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E806D5B26B412EA005936E7 /* RentStoryboard.storyboard */; };
 		9E806D5E26B412F9005936E7 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E806D5D26B412F9005936E7 /* SettingsStoryboard.storyboard */; };
 		9E806D6126B41FDE005936E7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E806D6026B41FDE005936E7 /* Account.swift */; };
+		9E806D6326B443F9005936E7 /* RentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E806D6226B443F9005936E7 /* RentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9E806D5B26B412EA005936E7 /* RentStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RentStoryboard.storyboard; sourceTree = "<group>"; };
 		9E806D5D26B412F9005936E7 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		9E806D6026B41FDE005936E7 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		9E806D6226B443F9005936E7 /* RentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +117,9 @@
 		9E806D1B26B41132005936E7 /* SurfRentApp */ = {
 			isa = PBXGroup;
 			children = (
-				9E806D5F26B41FD6005936E7 /* Models */,
+				9E806D2D26B41134005936E7 /* Info.plist */,
 				9E806D5226B4122A005936E7 /* Supporting Files */,
+				9E806D5F26B41FD6005936E7 /* Models */,
 				9E806D5026B4121D005936E7 /* Views */,
 				9E806D4F26B41217005936E7 /* Controllers */,
 			);
@@ -168,7 +171,6 @@
 			children = (
 				9E806D2526B41132005936E7 /* SurfRentApp.xcdatamodeld */,
 				9E806D2A26B41134005936E7 /* LaunchScreen.storyboard */,
-				9E806D2D26B41134005936E7 /* Info.plist */,
 				9E806D2826B41134005936E7 /* Assets.xcassets */,
 				9E806D1E26B41132005936E7 /* SceneDelegate.swift */,
 				9E806D1C26B41132005936E7 /* AppDelegate.swift */,
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				9E806D6026B41FDE005936E7 /* Account.swift */,
+				9E806D6226B443F9005936E7 /* RentTableViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				9E806D6126B41FDE005936E7 /* Account.swift in Sources */,
 				9E806D1F26B41132005936E7 /* SceneDelegate.swift in Sources */,
 				9E806D5426B41283005936E7 /* DevelopersViewController.swift in Sources */,
+				9E806D6326B443F9005936E7 /* RentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

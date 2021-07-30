@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "vtsport2-ff5a23e275ae72ab7ec8f67e7004c094-24486_big.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
