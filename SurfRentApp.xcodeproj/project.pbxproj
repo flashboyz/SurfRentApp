@@ -113,10 +113,10 @@
 		9E806D1B26B41132005936E7 /* SurfRentApp */ = {
 			isa = PBXGroup;
 			children = (
+				F833DDFD26B41C38008AF417 /* Models */,
 				9E806D5226B4122A005936E7 /* Supporting Files */,
-				9E806D5126B41225005936E7 /* Model */,
-				9E806D5026B4121D005936E7 /* View */,
-				9E806D4F26B41217005936E7 /* Controller */,
+				9E806D5026B4121D005936E7 /* Views */,
+				9E806D4F26B41217005936E7 /* Controllers */,
 			);
 			path = SurfRentApp;
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 			path = SurfRentAppUITests;
 			sourceTree = "<group>";
 		};
-		9E806D4F26B41217005936E7 /* Controller */ = {
+		9E806D4F26B41217005936E7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				9E806D2026B41132005936E7 /* LoginViewController.swift */,
@@ -147,10 +147,10 @@
 				9E806D5526B4129B005936E7 /* RentTableViewController.swift */,
 				9E806D5726B412B7005936E7 /* SettingsViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9E806D5026B4121D005936E7 /* View */ = {
+		9E806D5026B4121D005936E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9E806D2226B41132005936E7 /* Main.storyboard */,
@@ -158,14 +158,7 @@
 				9E806D5B26B412EA005936E7 /* RentStoryboard.storyboard */,
 				9E806D5D26B412F9005936E7 /* SettingsStoryboard.storyboard */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9E806D5126B41225005936E7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9E806D5226B4122A005936E7 /* Supporting Files */ = {
@@ -179,6 +172,13 @@
 				9E806D1C26B41132005936E7 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F833DDFD26B41C38008AF417 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
