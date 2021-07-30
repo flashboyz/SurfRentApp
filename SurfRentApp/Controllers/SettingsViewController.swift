@@ -9,9 +9,23 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var previewImage: UIImageView!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var rentPriceLabel: UILabel!
+    @IBOutlet weak var numberOfInventoryLabel: UILabel!
+    @IBOutlet weak var nameOfInventoryLabel: UILabel!
+    
+    @IBOutlet weak var rentalNameTF: UITextField!
+    @IBOutlet weak var rentalSurnameTF: UITextField!
+    @IBOutlet weak var rentalPhoneNumberTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        previewImage.layer.cornerRadius = 15
+        minusButton.layer.cornerRadius = 10
+        plusButton.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
     }
     

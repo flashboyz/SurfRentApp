@@ -53,6 +53,7 @@
                                     <outlet property="myImage" destination="9wv-fB-nGi" id="axS-7e-PdE"/>
                                     <outlet property="myName" destination="abM-P5-NiL" id="6oS-cl-0oW"/>
                                     <outlet property="myStatus" destination="b1W-9P-jCZ" id="uOE-Md-9fI"/>
+                                    <segue destination="Hh3-qy-vxz" kind="show" identifier="goToSettings" id="XkX-Le-REo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,9 +62,6 @@
                             <outlet property="delegate" destination="q81-YZ-Zww" id="1ly-4v-vFM"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="Hh3-qy-vxz" kind="show" identifier="goToSettings" id="6r4-2F-EoT"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHx-Yr-13a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
