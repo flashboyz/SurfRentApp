@@ -22,6 +22,7 @@
 		9E806D5A26B412E0005936E7 /* DevelopersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E806D5926B412E0005936E7 /* DevelopersStoryboard.storyboard */; };
 		9E806D5C26B412EA005936E7 /* RentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E806D5B26B412EA005936E7 /* RentStoryboard.storyboard */; };
 		9E806D5E26B412F9005936E7 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E806D5D26B412F9005936E7 /* SettingsStoryboard.storyboard */; };
+		9E806D6126B41FDE005936E7 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E806D6026B41FDE005936E7 /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9E806D5926B412E0005936E7 /* DevelopersStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevelopersStoryboard.storyboard; sourceTree = "<group>"; };
 		9E806D5B26B412EA005936E7 /* RentStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RentStoryboard.storyboard; sourceTree = "<group>"; };
 		9E806D5D26B412F9005936E7 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		9E806D6026B41FDE005936E7 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,7 @@
 		9E806D1B26B41132005936E7 /* SurfRentApp */ = {
 			isa = PBXGroup;
 			children = (
-				F833DDFD26B41C38008AF417 /* Models */,
+				9E806D5F26B41FD6005936E7 /* Models */,
 				9E806D5226B4122A005936E7 /* Supporting Files */,
 				9E806D5026B4121D005936E7 /* Views */,
 				9E806D4F26B41217005936E7 /* Controllers */,
@@ -174,9 +176,10 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F833DDFD26B41C38008AF417 /* Models */ = {
+		9E806D5F26B41FD6005936E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9E806D6026B41FDE005936E7 /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				9E806D5826B412B7005936E7 /* SettingsViewController.swift in Sources */,
 				9E806D5626B4129B005936E7 /* RentTableViewController.swift in Sources */,
 				9E806D2726B41132005936E7 /* SurfRentApp.xcdatamodeld in Sources */,
+				9E806D6126B41FDE005936E7 /* Account.swift in Sources */,
 				9E806D1F26B41132005936E7 /* SceneDelegate.swift in Sources */,
 				9E806D5426B41283005936E7 /* DevelopersViewController.swift in Sources */,
 			);
