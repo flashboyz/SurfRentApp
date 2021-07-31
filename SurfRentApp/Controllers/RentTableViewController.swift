@@ -9,7 +9,7 @@ import UIKit
 
 class RentTableViewController: UITableViewController {
 
-    let images = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth"]
+    let images = ["SUP Starboard 12'0", "KAYAK BIC Duassou", "SUP BIC 9'2", "SUP BIC 10'6", "SUP Gladiator 17'", "SUP JP-Australia 10'2", "SUP SIC 9'2", "SUP SIC 11'6"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
