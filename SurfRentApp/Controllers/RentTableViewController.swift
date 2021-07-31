@@ -9,11 +9,13 @@ import UIKit
 
 class RentTableViewController: UITableViewController {
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
+    var item = 0
+    
     let images = ["KAYAK BIC Duassou", "SUP BIC 9'2", "SUP BIC 10'6", "SUP Gladiator 17'", "SUP JP-Australia 10'2", "SUP SIC 9'2", "SUP SIC 11'6", "SUP Starboard 12'0"]
-=======
-    let images = ["SUP Starboard 12'0", "KAYAK BIC Duassou", "SUP BIC 9'2", "SUP BIC 10'6", "SUP Gladiator 17'", "SUP JP-Australia 10'2", "SUP SIC 9'2", "SUP SIC 11'6"]
->>>>>>> Settings
+//=======
+//    let images = ["SUP Starboard 12'0", "KAYAK BIC Duassou", "SUP BIC 9'2", "SUP BIC 10'6", "SUP Gladiator 17'", "SUP JP-Australia 10'2", "SUP SIC 9'2", "SUP SIC 11'6"]
+//>>>>>>> Settings
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +44,14 @@ class RentTableViewController: UITableViewController {
         cell.myImage.image = UIImage(named: images[indexPath.row])
         
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        item = indexPath.row
+        performSegue(withIdentifier: "goToSettings", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "goToSettings" else {return}
+        guard let destinationVC = segue.destination as? SettingsViewController else {return}
+        destinationVC.item = images[item]
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var plusButton: UIButton!
@@ -20,12 +20,21 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var rentalSurnameTF: UITextField!
     @IBOutlet weak var rentalPhoneNumberTF: UITextField!
     
+    var item = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.nameOfInventoryLabel.text = self.item
+            self.previewImage.image = UIImage(named: self.item)
+        }
+
+        
         previewImage.layer.cornerRadius = 15
         minusButton.layer.cornerRadius = 10
         plusButton.layer.cornerRadius = 10
         
+
         // Do any additional setup after loading the view.
     }
     
