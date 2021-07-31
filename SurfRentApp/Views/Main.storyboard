@@ -23,20 +23,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-fB-nGi">
-                                            <rect key="frame" x="20" y="9" width="86" height="80"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-fB-nGi">
+                                            <rect key="frame" x="26" y="9" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="Ofw-BH-gTX"/>
                                                 <constraint firstAttribute="width" constant="80" id="dE4-Xj-raJ"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abM-P5-NiL">
-                                            <rect key="frame" x="121" y="11" width="45" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abM-P5-NiL">
+                                            <rect key="frame" x="121" y="11" width="273" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Забронировано" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-9P-jCZ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Забронировано" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-9P-jCZ">
                                             <rect key="frame" x="121" y="48" width="126" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="systemRedColor"/>
@@ -45,14 +45,23 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="b1W-9P-jCZ" firstAttribute="leading" secondItem="9wv-fB-nGi" secondAttribute="trailing" constant="15" id="4Qm-nv-rUk"/>
-                                        <constraint firstItem="abM-P5-NiL" firstAttribute="leading" secondItem="9wv-fB-nGi" secondAttribute="trailing" constant="15" id="LWT-5g-S2f"/>
-                                        <constraint firstItem="abM-P5-NiL" firstAttribute="top" secondItem="EwZ-2N-rmR" secondAttribute="topMargin" id="Y4h-6b-Ccd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="b1W-9P-jCZ" secondAttribute="trailing" constant="147" id="5PV-UW-GJ0"/>
+                                        <constraint firstItem="b1W-9P-jCZ" firstAttribute="leading" secondItem="9wv-fB-nGi" secondAttribute="trailing" constant="15" id="7iV-H8-NUM"/>
+                                        <constraint firstItem="abM-P5-NiL" firstAttribute="top" secondItem="EwZ-2N-rmR" secondAttribute="topMargin" id="8rt-qf-1Xg"/>
+                                        <constraint firstItem="9wv-fB-nGi" firstAttribute="leading" secondItem="EwZ-2N-rmR" secondAttribute="leading" constant="26" id="EB4-BG-dOv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="b1W-9P-jCZ" secondAttribute="bottom" constant="18" id="MzT-FG-tix"/>
+                                        <constraint firstAttribute="bottom" secondItem="9wv-fB-nGi" secondAttribute="bottom" constant="9" id="Ri3-dh-hDa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="abM-P5-NiL" secondAttribute="trailing" id="T1s-bE-Tv3"/>
+                                        <constraint firstItem="9wv-fB-nGi" firstAttribute="top" secondItem="EwZ-2N-rmR" secondAttribute="top" constant="9" id="bJM-tJ-cMJ"/>
+                                        <constraint firstItem="abM-P5-NiL" firstAttribute="leading" secondItem="9wv-fB-nGi" secondAttribute="trailing" constant="15" id="kjd-cU-i6f"/>
+                                        <constraint firstItem="b1W-9P-jCZ" firstAttribute="top" secondItem="abM-P5-NiL" secondAttribute="bottom" constant="16" id="p4F-hv-E3p"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="myImage" destination="9wv-fB-nGi" id="axS-7e-PdE"/>
                                     <outlet property="myName" destination="abM-P5-NiL" id="6oS-cl-0oW"/>
                                     <outlet property="myStatus" destination="b1W-9P-jCZ" id="uOE-Md-9fI"/>
+                                    <segue destination="Hh3-qy-vxz" kind="show" identifier="goToSettings" id="XkX-Le-REo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,9 +70,6 @@
                             <outlet property="delegate" destination="q81-YZ-Zww" id="1ly-4v-vFM"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="Hh3-qy-vxz" kind="show" identifier="goToSettings" id="6r4-2F-EoT"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHx-Yr-13a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

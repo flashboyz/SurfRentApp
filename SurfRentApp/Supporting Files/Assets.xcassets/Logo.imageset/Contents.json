@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "starboard-bigeasy-ast-sup-paddleboard-12ftx32in-12-zoom.jpg",
+      "filename" : "Ellipse 46.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Ellipse 46@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Ellipse 46@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

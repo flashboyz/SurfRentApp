@@ -9,7 +9,7 @@ import UIKit
 
 class RentTableViewController: UITableViewController {
 
-    let images = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth"]
+    let images = ["KAYAK BIC Duassou", "SUP BIC 9'2", "SUP BIC 10'6", "SUP Gladiator 17'", "SUP JP-Australia 10'2", "SUP SIC 9'2", "SUP SIC 11'6", "SUP Starboard 12'0"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,8 @@ class RentTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RentTableViewCell
 
         cell.myName.text = images[indexPath.row]
-
+        cell.myStatus.text = "Доступно"
+        cell.myStatus.textColor = .green
         cell.myImage.image = UIImage(named: images[indexPath.row])
         
         return cell
