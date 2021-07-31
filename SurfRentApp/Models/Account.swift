@@ -4,8 +4,11 @@
 //
 //  Created by Daniil Belyaev on 30.07.2021.
 //
-
-import Foundation
- 
-
-//TODO: Для Александра 
+struct Account {
+    var user: String
+    var password: String
+    
+    static func getUser() -> Account {
+        Account(user: "User", password: "Password")
+    }
+}
