@@ -47,7 +47,9 @@ class RentTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         item = indexPath.row
-        performSegue(withIdentifier: "goToSettings", sender: self)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            performSegue(withIdentifier: "goToSettings", sender: self)
+//        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "goToSettings" else {return}
