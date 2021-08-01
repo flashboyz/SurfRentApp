@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rental Surf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKp-QO-3iX">
-                                <rect key="frame" x="110" y="149" width="155" height="43"/>
+                                <rect key="frame" x="110" y="105" width="155" height="43"/>
                                 <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveSupLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bof-5q-12e">
-                                <rect key="frame" x="103.5" y="286" width="168" height="128"/>
+                                <rect key="frame" x="103.5" y="242" width="168" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bof-5q-12e" secondAttribute="height" multiplier="21:16" id="Etj-eY-arB"/>
                                     <constraint firstAttribute="width" constant="168" id="FcU-5L-VqZ"/>
@@ -91,10 +91,9 @@
         <!--Navigation Controller-->
         <scene sceneID="H3O-Yh-jU2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QfG-eO-g08" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="QfG-eO-g08" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tCZ-I4-Cyp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

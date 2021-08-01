@@ -76,6 +76,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="Hh3-qy-vxz" kind="show" identifier="goToSettings" id="qt0-vW-tiq"/>
                     </connections>
@@ -97,7 +98,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gIp-NN-4Ya">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fsl-xO-iHW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Fsl-xO-iHW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dRe-Nj-UPf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
