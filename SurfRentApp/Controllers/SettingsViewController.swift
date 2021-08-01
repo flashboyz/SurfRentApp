@@ -47,6 +47,10 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "goBack", sender: self)

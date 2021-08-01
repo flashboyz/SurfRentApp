@@ -13,7 +13,7 @@ class RentTableViewController: UITableViewController {
     var item = 0
     var itemModel = Item(name: "", index: 0)
 
-    var items = [Item(name: "KAYAK BIC Duassou", index: 0), Item(name: "SUP BIC 9'2", index: 1), Item(name: "SUP BIC 10'6", index: 2), Item(name: "SUP Gladiator 17'", index: 3), Item(name:  "SUP JP-Australia 10'2", index: 4), Item(name:  "SUP SIC 9'2", index: 5), Item(name: "SUP SIC 11'6", index: 6), Item(name: "SUP Starboard 12'0", index: 7)]
+    var items = [Item(name: "KAYAK BIC Duassou", index: 0), Item(name: "SUP BIC 9'2", index: 1), Item(name: "SUP BIC 10'6", index: 2), Item(name: "SUP Gladiator 17'", index: 3), Item(name:  "SUP JP-Australia 10'2", index: 4), Item(name:  "SUP SIC 9'2", index: 5), Item(name: "SUP SIC 11'6", index: 6)]
     
 //    let images = ["KAYAK BIC Duassou", "SUP BIC 9'2", "SUP BIC 10'6", "SUP Gladiator 17'", "SUP JP-Australia 10'2", "SUP SIC 9'2", "SUP SIC 11'6", "SUP Starboard 12'0"]
 //=======
@@ -24,9 +24,9 @@ class RentTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print(itemModel)
+    
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     func updateItem(index: Int) {
@@ -73,27 +73,52 @@ class RentTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let unlockAction = UITableViewRowAction(style: .normal, title: "Разбронировать") { act, indexPath in
+//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        let unlockAction = UITableViewRowAction(style: .normal, title: "Разбронировать") { act, indexPath in
+//            self.items[indexPath.row].status = "Доступно"
+//            self.tableView.reloadData()
+//        }
+//        let infoAction = UITableViewRowAction(style: .normal, title: "Информация") { act, indexPath in
+//            let alert = UIAlertController(title: "Информация", message: "Имя: \(self.items[indexPath.row].nameOfOwner), Время: \(self.items[indexPath.row].time), Телефон: \(self.items[indexPath.row].number)", preferredStyle: .alert
+//            )
+//            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alert.addAction(okAction)
+//            self.present(alert, animated: true, completion: nil)
+//        }
+//        let noAction = UITableViewRowAction(style: .normal, title: "Не забронировано") { UITableViewRowAction, IndexPath in
+//            self.dismiss(animated: true, completion: nil)
+//        }
+//
+//
+//        if items[indexPath.row].status == "Доступно" {
+//            return [noAction]
+//        } else {
+//            return [infoAction, unlockAction]
+//        }
+//
+//    }
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let unlockAction = UIContextualAction(style: .destructive, title: "Разбронировать") { _, _, _ in
             self.items[indexPath.row].status = "Доступно"
             self.tableView.reloadData()
         }
-        let infoAction = UITableViewRowAction(style: .normal, title: "Информация") { act, indexPath in
+        let infoAction = UIContextualAction(style: .normal, title: "Информация") { _, _, _ in
             let alert = UIAlertController(title: "Информация", message: "Имя: \(self.items[indexPath.row].nameOfOwner), Время: \(self.items[indexPath.row].time), Телефон: \(self.items[indexPath.row].number)", preferredStyle: .alert
             )
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
-        let noAction = UITableViewRowAction(style: .normal, title: "Не забронировано") { UITableViewRowAction, IndexPath in
+        let noAction = UIContextualAction(style: .normal, title: "Не забронировано") { _, _, _ in
             self.dismiss(animated: true, completion: nil)
         }
         
         
         if items[indexPath.row].status == "Доступно" {
-            return [noAction]
+            
+            return UISwipeActionsConfiguration(actions: [noAction])
         } else {
-            return [infoAction, unlockAction]
+            return UISwipeActionsConfiguration(actions: [infoAction, unlockAction])
         }
 
     }

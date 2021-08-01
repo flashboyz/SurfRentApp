@@ -42,7 +42,17 @@ extension LoginViewController {
         
         alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: {(action) in print("Отмена")
         }))
-        alert.addAction(UIAlertAction(title: "ОК", style: .default))
+        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: { action in
+            if alert.textFields?[0].text == "User", alert.textFields?[1].text == "Password" {
+                self.performSegue(withIdentifier: "goToRents", sender: self)
+            } else {
+                let alert = UIAlertController(title: "Неверные данные", message: "", preferredStyle: .alert
+                )
+                let alertAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+                alert.addAction(alertAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }))
         self.present(alert, animated: true)
     }
 }
