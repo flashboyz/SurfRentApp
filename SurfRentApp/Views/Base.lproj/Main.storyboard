@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="129" y="94"/>
         </scene>
-        <!--Main-->
+        <!--RentStoryboard-->
         <scene sceneID="l2B-fb-nfw">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="RentStoryboard" storyboardName="Main" id="D2y-Rr-8hM" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="RentStoryboard" storyboardName="RentStoryboard" id="D2y-Rr-8hM" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Z4c-Qr-VK4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBc-qS-opp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

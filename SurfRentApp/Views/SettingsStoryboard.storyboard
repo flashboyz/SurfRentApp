@@ -20,8 +20,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="dx6-Xq-i6b">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="oYq-Pd-r9K"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="gbV-VY-HkF"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="oYq-Pd-r9K">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="Y6W-OH-hqX" id="Ti6-gz-YJ7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="gbV-VY-HkF">
+                                            <connections>
+                                                <action selector="saveButtonPressed:" destination="Y6W-OH-hqX" id="Wch-nd-jhL"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -168,17 +176,21 @@
                     </view>
                     <connections>
                         <outlet property="minusButton" destination="8VM-Ic-VXR" id="fgK-ut-RxG"/>
+                        <outlet property="mySwitch" destination="zcp-rf-MPG" id="zV4-XC-l3l"/>
                         <outlet property="nameOfInventoryLabel" destination="fPE-hs-xhf" id="Mdv-5G-obH"/>
                         <outlet property="numberOfInventoryLabel" destination="R26-kz-ou2" id="Vm1-bQ-Fdk"/>
                         <outlet property="plusButton" destination="z8B-Q1-r91" id="Pgd-Ep-t6T"/>
                         <outlet property="previewImage" destination="acd-JZ-dDY" id="yny-O5-TdZ"/>
+                        <outlet property="priceSegmentedControl" destination="nVD-3N-yy7" id="p1Y-z2-1F5"/>
                         <outlet property="rentPriceLabel" destination="mXv-Fc-WVn" id="DbQ-AZ-cSk"/>
                         <outlet property="rentalNameTF" destination="Gnt-vN-YI7" id="J6q-rG-Ibk"/>
                         <outlet property="rentalPhoneNumberTF" destination="Mwr-ec-MmE" id="EX5-gH-F70"/>
                         <outlet property="rentalSurnameTF" destination="mmM-Lu-4Rt" id="cK5-NZ-ccG"/>
+                        <segue destination="6av-NJ-MBK" kind="unwind" identifier="goBack" unwindAction="unwindToRent:" id="G0z-wd-Smu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6av-NJ-MBK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="33.75" y="92.957746478873247"/>
         </scene>
