@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var previewImage: UIImageView!
     @IBOutlet weak var minusButton: UIButton!
@@ -22,25 +22,30 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var rentalPhoneNumberTF: UITextField!
     
     @IBOutlet weak var priceSegmentedControl: UISegmentedControl!
+    
     var item = ""
     var price = 0
     var index = 0
     
+    private var numberOfInventory = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        rentalNameTF.delegate = self
+        rentalSurnameTF.delegate = self
+        rentalPhoneNumberTF.delegate = self
+        
         DispatchQueue.main.async {
             self.nameOfInventoryLabel.text = self.item
             self.previewImage.image = UIImage(named: self.item)
         }
-
-        
         
         previewImage.layer.cornerRadius = 15
         minusButton.layer.cornerRadius = 10
         plusButton.layer.cornerRadius = 10
 //        price = rentPriceLabel.text as! Int * numberOfInventoryLabel.text as! Int
 
-        // Do any additional setup after loading the view.
+    
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
@@ -50,6 +55,26 @@ class SettingsViewController: UIViewController {
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func increaseButtonPressed(_ sender: UIButton) {
+        var rentPrice = 500
+        if sender.tag == 0 {
+            numberOfInventory -= 1
+            rentPrice = rentPrice * numberOfInventory
+            numberOfInventoryLabel.text = "\(numberOfInventory)"
+            rentPriceLabel.text = "\(rentPrice)"
+            
+        } else if sender.tag == 1 {
+            numberOfInventory += 1
+            rentPrice = rentPrice * numberOfInventory
+            numberOfInventoryLabel.text = "\(numberOfInventory)"
+            rentPriceLabel.text = "\(rentPrice)"
+        } else {return}
+    }
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "goBack" else {return}
         guard let destinationVC = segue.destination as? RentTableViewController else {return}
@@ -81,5 +106,17 @@ class SettingsViewController: UIViewController {
 
         
     }
+    
+}
+
+//MARK: -extension for ViewController
+
+extension SettingsViewController {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
     
 }

@@ -35,15 +35,13 @@ class RentTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return items.count
+        items.count
     }
 
     
@@ -81,7 +79,7 @@ class RentTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
         let infoAction = UITableViewRowAction(style: .normal, title: "Информация") { act, indexPath in
-            let alert = UIAlertController(title: "Information", message: "Name: \(self.items[indexPath.row].nameOfOwner), Time: \(self.items[indexPath.row].time), Number: \(self.items[indexPath.row].number)", preferredStyle: .alert
+            let alert = UIAlertController(title: "Информация", message: "Имя: \(self.items[indexPath.row].nameOfOwner), Время: \(self.items[indexPath.row].time), Телефон: \(self.items[indexPath.row].number)", preferredStyle: .alert
             )
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(okAction)

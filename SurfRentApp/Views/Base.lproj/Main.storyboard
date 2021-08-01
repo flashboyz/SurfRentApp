@@ -43,6 +43,14 @@
                                     <action selector="buttonPressedAсtion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbK-85-vFm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89X-qE-4uz">
+                                <rect key="frame" x="164" y="401" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="D2y-Rr-8hM" kind="show" id="6nC-rS-FyN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,6 +96,9 @@
             <point key="canvasLocation" x="722" y="-198"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6nC-rS-FyN"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="waveSupLogo" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
