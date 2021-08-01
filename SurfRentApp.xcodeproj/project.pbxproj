@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E11232A26B6ABC600D4B0AD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11232926B6ABC600D4B0AD /* Item.swift */; };
 		9E806D1D26B41132005936E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E806D1C26B41132005936E7 /* AppDelegate.swift */; };
 		9E806D1F26B41132005936E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E806D1E26B41132005936E7 /* SceneDelegate.swift */; };
 		9E806D2126B41132005936E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E806D2026B41132005936E7 /* LoginViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E11232926B6ABC600D4B0AD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9E806D1926B41132005936E7 /* SurfRentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfRentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E806D1C26B41132005936E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E806D1E26B41132005936E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				9E806D6026B41FDE005936E7 /* Account.swift */,
 				9E806D6226B443F9005936E7 /* RentTableViewCell.swift */,
+				9E11232926B6ABC600D4B0AD /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E11232A26B6ABC600D4B0AD /* Item.swift in Sources */,
 				9E806D2126B41132005936E7 /* LoginViewController.swift in Sources */,
 				9E806D1D26B41132005936E7 /* AppDelegate.swift in Sources */,
 				9E806D5826B412B7005936E7 /* SettingsViewController.swift in Sources */,
