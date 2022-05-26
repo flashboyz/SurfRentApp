@@ -72,7 +72,7 @@ class RentTableViewController: UITableViewController {
         performSegue(withIdentifier: "goToSettings", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+
 //    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 //        let unlockAction = UITableViewRowAction(style: .normal, title: "Разбронировать") { act, indexPath in
 //            self.items[indexPath.row].status = "Доступно"
@@ -98,7 +98,7 @@ class RentTableViewController: UITableViewController {
 //
 //    }
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let unlockAction = UIContextualAction(style: .destructive, title: "Разбронировать") { _, _, _ in
+        let unlockAction = UIContextualAction(style: .destructive, title: "Снять бронь") { _, _, _ in
             self.items[indexPath.row].status = "Доступно"
             self.tableView.reloadData()
         }
